@@ -1,13 +1,17 @@
 <?php
 function numeros_primos($p){
-    $sequencia = array ();
-    $sequencia[0] = 1;
-  $sequencia[1] = 1;
- for($i = 2; $i < $p; $i++){
-     $sequencia[$i 
-     ]= $sequencia[$i-1] + $sequencia[$i-2];
- 
+ $primos=array(2);
+ $n=3;
+ while (count($primos) <$posicao){
+    foreach($primos as $primo){
+        if(n%$primo==0)
+        $e_primo = false;
+    
+
+    }
  }
- return $sequencia[$p-1];}
- echo numeros_primos(10);
+ if($e_primo){
+    $primos[]= $n;
+ }
+ $n++;
 ?>
