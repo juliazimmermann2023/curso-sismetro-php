@@ -1,4 +1,9 @@
 <?php
-    echo "Nome: ". $_POST["nome"];
-    
+
+echo "Nome: ".$_POST["nome"];
+echo "<br>";
+echo "E-mail: ".$_POST["email"];
+echo "<br>";
+
+
 ?>

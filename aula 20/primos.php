@@ -1,17 +1,21 @@
 <?php
-function numeros_primos($p){
- $primos=array(2);
- $n=3;
- while (count($primos) <$posicao){
+function isPrimo($posicao) {
+    $primos= array(2);
+    $num = 3;
+    while(count($primos) < $posicao){
+        $v_primo = true;
     foreach($primos as $primo){
-        if(n%$primo==0)
-        $e_primo = false;
-    
-
+        if($num%$primo == 0){
+            $v_primo = false;
+        }
     }
- }
- if($e_primo){
-    $primos[]= $n;
- }
- $n++;
+    if($v_primo){
+        $primos[] = $num;
+    }
+    $num++;
+        }
+        return$primos[$posicao - 1];
+    }
+   
+echo isPrimo($_GET["posicao"]);
 ?>

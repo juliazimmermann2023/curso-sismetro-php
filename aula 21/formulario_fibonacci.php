@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <style>
-    *{
+    {
     background-color:pink;
     }
     #bt{
