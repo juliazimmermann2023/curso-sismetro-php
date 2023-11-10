@@ -7,17 +7,14 @@
     <title>aula 21</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <style>
-        body {
-            background: rgb(255, 190, 241);
-            background: radial-gradient(circle, rgba(255, 190, 241, 1) 0%, rgba(240, 90, 214, 1) 100%);
-            height: 100vh;
-        }
-
         @import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
-        
-  @import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Roboto+Mono:ital,wght@1,300&display=swap');
+
+        @import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Roboto+Mono:ital,wght@1,300&display=swap');
 
         body {
+            background: rgb(254, 2, 2);
+            background: radial-gradient(circle, rgba(254, 2, 2, 1) 0%, rgba(0, 0, 0, 1) 100%);
+            height: 100vh;
             text-align: center;
         }
 
@@ -29,30 +26,80 @@
         }
 
         img {
-            width: 1%;
+            width: 50%;
         }
-h2{
-   font-family: 'Roboto+Mono';
- 
+
+        h2 {
+            font-family: 'Roboto+Mono';
+            color: white;
             text-align: center;
             font-size: 3em;
-         
-}
+
+        }
+
         h1 {
             font-family: 'Agbalumo', serif;
             text-align: center;
             font-size: 3em;
-            background-color: rgba(245, 123, 214, 0.952);
+            background-color: black;
             margin-bottom: 30px;
+            color: white;
+        }
+
+        body {
+            position: relative;
+
+            text-align: center;
+            background: black;
+            overflow: hidden;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(ellipse at center, transparent 40%, red 45%, black 47%);
+            border-radius: 50%;
+            opacity: 0.9;
+            pointer-events: none;
+            z-index: -1;
+            transform: rotate(30deg);
+        }
+
+        body::after {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(ellipse at center, transparent 40%, red 45%, black 47%);
+            border-radius: 50%;
+            opacity: 0.9;
+            pointer-events: none;
+            z-index: -1;
+            transform: rotate(-30deg);
+        }
+
+        #centro {
+            text-align: center;
+            color: white;
+        }
+
+        main {
+            color: black;
         }
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap" rel="stylesheet">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Roboto+Mono:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Roboto+Mono:ital,wght@1,300&display=swap" rel="stylesheet">
 
 </head>
 
@@ -84,6 +131,7 @@ h2{
 
 
     <h1> Calculadora de Números Primos</h1>
+    <img scr="https://png.pngtree.com/png-vector/20220923/ourmid/pngtree-gray-spider-web-clipart-design-with-hanging-cute-and-funny-littlespider-png-image_6213922.png">
     <div class="row">
         <div class="col-md-6 offset-md-3">
 
@@ -92,13 +140,15 @@ h2{
 
 
             <form method="post">
-                <div class="mb-3">
-                    <label class="form-label">Posição:</label>
-                </div>
+                <main>
+                    <div class="mb-3">
+                        <label class="form-label">Posição:</label>
+                    </div>
+                </main>
 
 
                 <div class="mb-3">
-                    <input type="text" name="posicao" class="form-control" placeholder="posicao da sequencia de fibonacci" value="<?php if (isset($_POST["posicao"])) echo $_POST["posicao"]; ?>">
+                    <input type="text" name="posicao" class="form-control" placeholder="posicao da sequencia de numeros primos" value="<?php if (isset($_POST["posicao"])) echo $_POST["posicao"]; ?>">
                 </div>
 
                 <div class="mb-3">
@@ -110,8 +160,8 @@ h2{
                 ?>
 
                     <h2> Resultado: </h2>
-                    <div class="row text-center">
-                        <div class="col-3">
+                    <div id="centro">
+                        <div>
                             <small>Valor:</small>
                             <h3><?php echo isPrimo($_POST["posicao"]); ?> </h3>
                         </div>
@@ -124,9 +174,14 @@ h2{
 
 
             </form>
-            <img src="https://media.tenor.com/V3k1aFw8wNQAAAAi/monica-cebolinha.gif">
+
+        </div>
+        <div>
+            <img src="https://3.bp.blogspot.com/-NykAid3hIy0/UbJUU6VF8BI/AAAAAAAAlSI/ZOk0x9OZqpQ/s1600/19.gif">
         </div>
     </div>
+
+
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
