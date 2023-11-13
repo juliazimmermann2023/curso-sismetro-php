@@ -148,7 +148,7 @@
 
 
                 <div class="mb-3">
-                    <input type="text" name="posicao" class="form-control" placeholder="posicao da sequencia de numeros primos" value="<?php if (isset($_POST["posicao"])) echo $_POST["posicao"]; ?>">
+                    <input type="text" name="posicao" class="form-control" placeholder="Posição da Sequência de Números Primos" value="<?php if (isset($_POST["posicao"])) echo $_POST["posicao"]; ?>">
                 </div>
 
                 <div class="mb-3">
