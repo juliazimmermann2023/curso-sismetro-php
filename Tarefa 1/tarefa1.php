@@ -12,8 +12,8 @@
         @import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Roboto+Mono:ital,wght@1,300&display=swap');
 
         body {
-            background: rgb(255,0,0);
-             background: radial-gradient(circle, rgba(255,0,0,1) 0%, rgba(0,0,0,1) 100%);
+            background: rgb(241,255,0);
+            background: radial-gradient(circle, rgba(241,255,0,1) 0%, rgba(188,0,255,1) 100%);
             height: 100vh;
             text-align: center;
         }
@@ -38,10 +38,11 @@
         }
 
         h1 {
+
             font-family: 'Agbalumo', serif;
             text-align: center;
             font-size: 3em;
-            background-color: black;
+            
             margin-bottom: 30px;
             color: white;
         }
@@ -95,7 +96,7 @@
 
 
     <h1> Calculadora de Números Primos</h1>
-    <img scr="https://png.pngtree.com/png-vector/20220923/ourmid/pngtree-gray-spider-web-clipart-design-with-hanging-cute-and-funny-littlespider-png-image_6213922.png">
+   
     <div class="row">
         <div class="col-md-6 offset-md-3">
 
@@ -141,7 +142,7 @@
 
         </div>
         <div>
-            <img src="https://3.bp.blogspot.com/-NykAid3hIy0/UbJUU6VF8BI/AAAAAAAAlSI/ZOk0x9OZqpQ/s1600/19.gif">
+            <img src="https://media3.giphy.com/media/gK6Do7rSuXxYEZEnIx/giphy.gif?cid=82a1493bf8ohwdf88b11xtcfv2nqr8j2hkuvmslvqj6lk97m&ep=v1_gifs_search&rid=giphy.gif&ct=s">
         </div>
     </div>
 
