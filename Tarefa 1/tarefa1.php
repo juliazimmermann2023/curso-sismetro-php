@@ -12,8 +12,8 @@
         @import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Roboto+Mono:ital,wght@1,300&display=swap');
 
         body {
-            background: rgb(254, 2, 2);
-            background: radial-gradient(circle, rgba(254, 2, 2, 1) 0%, rgba(0, 0, 0, 1) 100%);
+            background: rgb(255,0,0);
+             background: radial-gradient(circle, rgba(255,0,0,1) 0%, rgba(0,0,0,1) 100%);
             height: 100vh;
             text-align: center;
         }
@@ -46,43 +46,7 @@
             color: white;
         }
 
-        body {
-            position: relative;
-
-            text-align: center;
-            background: black;
-            overflow: hidden;
-        }
-
-        body::before {
-            content: "";
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(ellipse at center, transparent 40%, red 45%, black 47%);
-            border-radius: 50%;
-            opacity: 0.9;
-            pointer-events: none;
-            z-index: -1;
-            transform: rotate(30deg);
-        }
-
-        body::after {
-            content: "";
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(ellipse at center, transparent 40%, red 45%, black 47%);
-            border-radius: 50%;
-            opacity: 0.9;
-            pointer-events: none;
-            z-index: -1;
-            transform: rotate(-30deg);
-        }
+       
 
         #centro {
             text-align: center;
@@ -90,7 +54,7 @@
         }
 
         main {
-            color: black;
+            color: white;
         }
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
